@@ -1,0 +1,70 @@
+#section-slider {
+    .btn {
+        position: absolute;
+        z-index: 200;
+        top: 50%;
+        right: 60px;
+        height: 35px;
+        width: 35px;
+        border-radius: 30px;
+        cursor: pointer;
+        opacity: 0;
+        -webkit-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        &.show {
+            opacity: 1;
+        }
+
+        .progress {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 38px;
+            width: 38px;
+            -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            -ms-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
+
+            &.active {
+                circle:nth-child(1) {
+                    -webkit-transition: stroke-dashoffset 6s linear;
+                    -o-transition: stroke-dashoffset 6s linear;
+                    transition: stroke-dashoffset 6s linear;
+                    stroke-dashoffset: 0;
+                }
+            }
+            circle:nth-child(1) {
+                fill: none !important;
+                stroke-width: 4px;
+                stroke-dasharray: 339.292;
+                stroke-dashoffset: 339.292;
+                -webkit-transition: stroke-dashoffset 0s ease;
+                -o-transition: stroke-dashoffset 0s ease;
+                transition: stroke-dashoffset 0s ease;
+            }
+        }
+
+        .arrow {
+            stroke: none !important;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+
+        .progress circle,
+        .arrow {
+            fill: #FFF;
+            stroke: #FFF;
+        }
+    }
+}

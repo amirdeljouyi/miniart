@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MINIART</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="css/mehdi.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/debug.css"> -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+
+<svg class="hidden">
+    <path id="arrow-right" fill-rule="nonzero" d="M.7123704 1.9738796c-.2406605-.2406606-.2406605-.6308486 0-.8715092.2406606-.2406605.6308486-.2406605.8715092 0l4.31375 4.31375c.2406605.2406606.2406605.6308486 0 .8715092l-4.31375 4.31375c-.2406606.2406605-.6308486.2406605-.8715092 0-.2406605-.2406606-.2406605-.6308486 0-.8715092L4.5903659 5.851875.7123704 1.9738796z"></path>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+    </symbol>
+    <svg id="icon-arrowup" viewBox="0 0 49 46">
+        <title>arrow up</title>
+        <path d="M49 45.946H0L24.5.054z"></path>
+    </svg>
+    <svg id="icon-arrows" class="arrows">
+        <title>arrows</title>
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
+    <g id="AgenceMe-Logo" fill-rule="evenodd">
+        <path fill-opacity=".6" d="M47.5680663 0h12.7250076c.6862841 0 1.2426272.55634314 1.2426272 1.24262717 0 .28624486-.0988236.5637126-.2797697.7855112L39.0564375 29.2396505c-.2426008.2973731-.6089955.4659639-.9926636.4567584l-12.9049929-.3096333c-.6860866-.0164614-1.228925-.5859892-1.2124635-1.2720758.0067186-.2800212.1078469-.5495593.2869806-.7648919L46.6127772.44792907C46.8488641.1641342 47.1989097 0 47.5680663 0zM23.8773479 0h12.7222466c.686284 0 1.2426272.55634314 1.2426272 1.24262717 0 .28624486-.0988237.5637126-.2797698.7855112L15.3513461 29.253884c-.2359917.289272-.589534.457116-.9628574.457116H1.39561963c-.68628404 0-1.24262718-.5563431-1.24262718-1.2426272 0-.2887789.10057817-.5685416.28445183-.7912157L22.9191726.45141146C23.1552328.16553863 23.5066085 0 23.8773479 0z"></path>
+        <path d="M47.9418129 0h13.7260736c.6862841 0 1.2426272.55634314 1.2426272 1.24262717V22.9856977c0 .3512027-.1486149.6860049-.4090827.9215889L48.7753573 36.3220335c-.5089795.4603539-1.2947794.4209351-1.7551333-.0880444-.2066277-.228453-.3210383-.525509-.3210383-.8335444V1.24262717C46.6991857.55634314 47.2555288 0 47.9418129 0z"></path>
+        <rect width="16.211" height="29.711" x="23.006" rx="1.243"></rect>
+    </g>
+    <svg id="scroll" viewBox="0 0 23 32">
+        <path d="M11.5 31.75c6.1 0 11.1-5.05 11.1-11.25v-9C22.6 5.3 17.65.25 11.5.25 5.35.25.4 5.3.4 11.5v9c0 6.2 5 11.25 11.1 11.25zM2.4 11.5c0-5.1 4.05-9.25 9.1-9.25s9.1 4.15 9.1 9.25v9c0 5.1-4.05 9.25-9.1 9.25S2.4 25.6 2.4 20.5v-9z"></path>
+        <path d="M11.5 14.55c.55 0 1-.45 1-1V9.9c0-.55-.45-1-1-1s-1 .45-1 1v3.65c0 .55.45 1 1 1z"></path>
+    </svg>
+    <path id="Twitter-icn" fill-rule="evenodd" d="M14.52 1.5380746c-.5335165.23665067-1.1079415.39668782-1.7104913.46819378.6153337-.36774493 1.0874872-.950859 1.3099278-1.6454883-.5761296.34050455-1.2127698.58822162-1.8928755.7210184-.5420391-.5780065-1.3167459-.93894134-2.1741222-.93894134-1.64401478 0-2.97780594 1.33222412-2.97780594 2.97515865 0 .2332456.02556788.45968115.07670364.67760407C4.6755133 3.6713357 2.48093678 2.48808234 1.0107836.68596193c-.2565311.4409534-.40312028.95256152-.40312028 1.49736882 0 1.03172884.5258461 1.94257855 1.32526853 2.47631946-.48749427-.01447144-.94771614-.149822-1.34998415-.37114997v.03660424c0 1.44203684 1.02697658 2.64486922 2.39059694 2.91727287-.24971298.06980344-.51306216.10470515-.78493397.10470515-.1917591 0-.3792569-.0178765-.56078887-.0527782.3792569 1.1815508 1.47867582 2.0421761 2.7826378 2.0651602-1.01930623.7984832-2.3045184 1.2743383-3.6996725 1.2743383-.24033808 0-.47811938-.0136202-.7107871-.0408605 1.31845043.8427488 2.88490932 1.3356291 4.56642367 1.3356291 5.48004933 0 8.47575273-4.532967 8.47575273-8.46494348 0-.12939173-.0025567-.25878347-.0076703-.38562142.5820954-.41967188 1.0874872-.94319765 1.4854939-1.5399319"></path>
+    <path id="Instagram-icn" fill-rule="evenodd" d="M7.8633475.07142857c1.9418092 0 2.1852982.008017 2.9479217.04190948.7610341.03380956 1.2807931.15154866 1.7355858.32372032.4701757.17794943.868914.41608152 1.2664319.8032466.3974895.38719274.6419718.7755742.8246949 1.23353754.1767345.4429799.2976133.94923868.3323245 1.6905057.0347963.7428151.043027.97997964.043027 2.8713799 0 1.89137263-.0082307 2.1285372-.043027 2.8713523-.0347112.741267-.15559 1.2475258-.3323245 1.6905057-.1827231.4579633-.4272054.8463448-.8246949 1.2335375-.3975179.3871651-.7962562.6252972-1.2664319.8032742-.4547927.1721441-.9745517.2898832-1.7355858.3236927C10.0486457 13.991983 9.8051567 14 7.8633475 14c-1.9418376 0-2.1853265-.008017-2.94795-.0419095-.7610342-.0338095-1.2807932-.1515486-1.7355859-.3236927-.4701757-.177977-.868914-.4161091-1.2664318-.8032742-.3974895-.3871927-.6419718-.7755742-.8246665-1.2335375-.1767629-.4429799-.2976418-.9492387-.3323529-1.6905057-.0347963-.7428151-.0430271-.97997967-.0430271-2.8713523 0-1.89140026.0082308-2.1285648.0430271-2.8713799.0347111-.74126702.15559-1.2475258.3323529-1.6905057.1826947-.45796334.427177-.8463448.8246665-1.23353752.3975178-.3871651.7962561-.62529718 1.2664318-.8032466C3.6346043.2648867 4.1543633.1471476 4.9153975.11333804c.7626235-.0338925 1.0061124-.04190948 2.94795-.04190948zm0 1.254824c-1.9091416 0-2.1352891.00710472-2.8892277.0406102-.697118.03096214-1.0757051.1444163-1.3276518.23979077-.3337436.12633663-.5719251.27724946-.8221121.5209658-.2502155.2436887-.4051527.47568366-.5348583.80075858-.0979178.24540267-.2143974.61415633-.2461852 1.2931673-.0343989.73435583-.0416931.9546294-.0416931 2.8141829 0 1.85952582.0072942 2.07979938.0416931 2.81415518.0317878.679011.1482674 1.0477647.2461852 1.2931674.1297056.3250749.2846712.5570698.5348583.8007585.250187.2437164.4883685.3946292.8221121.5209658.2519467.0953745.6305338.2088287 1.3276518.2397908.7538535.0335055.9799442.0406102 2.8892277.0406102 1.9092551 0 2.1353743-.0071047 2.8891994-.0406102.6971179-.0309621 1.075705-.1444163 1.3276518-.2397908.3337436-.1263366.571925-.2772494.8221121-.5209658.2502155-.2436887.4051526-.4756836.5348582-.8007585.0979178-.2454027.2143974-.6141564.2461852-1.2931674.034399-.7343558.0416931-.95462936.0416931-2.8141552 0-1.85955347-.0072941-2.07982705-.0416931-2.81418287-.0317878-.67901098-.1482674-1.04776464-.2461852-1.2931673-.1297056-.32507493-.2846427-.5570699-.5348582-.8007586-.2501871-.24371633-.4883685-.39462916-.8221121-.5209658-.2519468-.09537446-.6305339-.20882862-1.3276518-.23979077-.7539386-.03350547-.9800862-.04061018-2.8891994-.04061018zm0 2.13320913c2.0277782 0 3.6716052 1.60113012 3.6716052 3.5762664 0 1.9751087-1.643827 3.5762388-3.6716052 3.5762388-2.0278066 0-3.6716335-1.6011301-3.6716335-3.5762388 0-1.97513628 1.6438269-3.5762664 3.6716335-3.5762664zm0 5.8976812c1.3162706 0 2.3833192-1.03933303 2.3833192-2.3214148 0-1.2821094-1.0670486-2.3214424-2.3833192-2.3214424-1.316299 0-2.3833475 1.039333-2.3833475 2.3214424 0 1.28208177 1.0670485 2.3214148 2.3833475 2.3214148zm4.6746807-6.03897365c0 .46155718-.3841499.83570157-.8580153.83570157-.473837 0-.8579869-.3741444-.8579869-.83570157s.3841499-.8357292.8579869-.8357292c.4738654 0 .8580153.37417203.8580153.8357292z"></path>
+</svg>
+
+<body class="loading">
+    <div id="nav-btn">
+        <div class="content">
+            <div class="text">
+                <span>م</span>
+                <span>ن</span>
+                <span>و</span>
+            </div>
+            <div class="action">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <nav id="nav">
+        <div class="content">
+            <ul class="page-home menu columns is-mobile">
+                <div class="column">
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-hero">مینی آرت</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-about">درباره</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-progress">مراحل کار</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-work">ارسال رایگان</a>
+                    </li>
+                </div>
+
+
+                <div class="column">
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-visualization">شبیه سازی</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-panel">پکیج ها</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-portofilo">نمونه کار ها</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="title is-3 menu__item-name" href="#section-ourteam">تیم ما</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div id="nav-btn-mobile">
+        <div class="content">
+            <div class="container-bar">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="container-text">
+                <span>منو</span>
+            </div>
+        </div>
+    </div>
+    <section class="hero is-semi-fullheight is-relative" id="section-hero">
+        <canvas id="gradient"></canvas>
+        <canvas class="background"></canvas>
+        <div class="hero-head">
+            <div class="container has-text-centered">
+                <div class="logo">
+                    <a class="container-logo">
+                        <img src="img/final miniart1.png" style="height: 150px;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-body is-vertical-center">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-half-desktop is-offset-one-quarter">
+                        <div id="typed-strings">
+                        </div>
+                        <span class="title is-1 has-text-white" id="typed"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot is-relative has-bottom-margin-20">
+            <div class="container has-text-centered">
+                <div class="scroll">
+                    <svg>
+                        <use xlink:href="#scroll"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="social-icons is-hidden-mobile">
+                <div class="action">
+                    <div class="bar"></div>
+                </div>
+                <ul class="">
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
+                                <use xlink:href="#Instagram-icn"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 12">
+                                <use xlink:href="#Twitter-icn"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section right" id="section-about">
+        <div class="columns">
+            <div class="column is-half">
+                <img class="imgage" src="img/qonto-cover.jpg">
+            </div>
+            <div class="column is-half has-margin-auto">
+                <div class="container-text has-margin-auto right">
+                    <h1 class="title is-1 is-spaced blue">
+                        <p>درباره</p>
+                        <p>مینی آرت</p>
+                    </h1>
+                    <h1 class="subtitle is-4">
+                        ما تو مینی آرت کارهای باحالی میکنیم از ساختن مجسمه خودتون گرفته تا هر چیزی که فکرشو کنید ما با
+                        ابزارهای پیشرفته شما رو اسکن
+                        میکنیم بعد از اون ویرایش های تخصصی که تیممون زحمتشو میکشه مجسمتونو پرینت و رنگ میکنیم . راستی
+                        انتقاد
+                        و پیشنهادی داشتید ما خوشحال میشیم
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section straight is-relative no-padding" id="section-slider">
+        <div class="css-slider">
+            <section class="slide show slide-one">
+                <img class="sec2pngs" src="img/design.png" />
+                <h1 style="font-size: 3rem; margin-top: -5%">طراحی 3 بعدی</h1>
+                <h1>خدمات طراحی صنعتی و 3 بعدی از جمله نرم افزارهای Salidwork و Catia</h1>
+            </section>
+            <section class="slide slide-two">
+                <img class="sec2pngs" src="img/printpng.png" />
+                <h1 style="font-size: 3rem; margin-top: -5%">پرینت 3 بعدی</h1>
+                <h1>خدمات پرینت با انواع مواد مختلف از جمله PLA,ABS,HIPS,PVA</h1>
+            </section>
+            <section class="slide slide-three">
+                <img class="sec2pngsOrange" src="img/scanpng.png" />
+                <h1 style="font-size: 3rem; margin-top: -5%">اسکن 3 بعدی</h1>
+                <h1> اسکن فتوگرامتری برای اجسام و اعضا بدن </h1>
+            </section>
+            <footer>
+                <span class="controls active"></span>
+                <span class="controls"></span>
+                <span class="controls"></span>
+            </footer>
+        </div>
+        <div class="btn next-button show">
+            <svg class="progress" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="54"></circle>
+            </svg>
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 11">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+        </div>
+    </section>
+    <section class="section straight vertical-padding">
+        <img class="cover-image" src="img/p1.jpg" />
+    </section>
+    <section class="section right" id="section-progress">
+        <div class="columns">
+            <div class="column is-one-quarter-tablet is-half-desktop has-margin-auto">
+                <div class="container-text has-margin-auto right">
+                    <h1 class="title is-1 is-spaced blue">
+                        <p>مراحل</p>
+                        <p> کار</p>
+                    </h1>
+                </div>
+            </div>
+            <div class="column">
+                <div class="circulars">
+                    <a class="circular">اسکن</a>
+                    <a class="circular">ویرایش</a>
+                    <a class="circular">تایید </a>
+                    <a class="circular">پرینت</a>
+                </div>
+                <div class="has-p-t-30 container-text large">
+                    <h1 class="subtitle is-4">
+                        تیم مینی آرت در مرحله اول شما یا هر چیزی که دوست دارید رو اسکن میکنه بعد در مرحله بعد فایل اسکن
+                        رو ادیت کرده تا مناسب سلیقه
+                        شما در بیاد سپس اگه شما تایید کردید ما فایلتون رو پرینت و ارسال میکنیم
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section right padding-only-left" id="section-work">
+        <div class="is-100height-desktop has-background-info">
+            <div class="columns is-gapless is-vertical-center-desktop is-desktop">
+                <div class="column is-narrow-desktop">
+                    <video class="" preload="none" autoplay="autoplay" loop="loop" muted="muted" poster="img/video.png">
+                        <source src="video/video.mp4" type="video/mp4">
+                        <source src="video/video.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="column is-half-desktop">
+                    <div class="container-text has-margin-auto left">
+                        <h1 class="title is-1 is-spaced is-rotate-90 primary">
+                            <p>ارسال رایگان</p>
+                        </h1>
+                        <h1 class="subtitle is-4 has-text-white">
+                            فرقی نداره از کجا سفارش میدید ما سفارشتون رو در سریعترین زمان ممکن براتون ارسال میکنیم
+                            ارسال ها تماما رایگان هستن
+                        </h1>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section left no-vertical-padding" id="section-visualization">
+        <div class="columns">
+            <div class="column is-half has-margin-auto">
+                <div class="container-text has-margin-auto left messy">
+                    <h1 class="title is-1 is-spaced primary">
+                        <p>شبیه</p>
+                        <p>سازی</p>
+                    </h1>
+                    <h1 class="subtitle is-4">
+                        شما علاوه بر خودتون هر چیزی رو میتونید اسکن و پرینت کنید حتی میتونید شخصیت های محبوبتون رو
+                        به ما بگید تا ما اونارو شبیه سازی
+                        کنیم
+                    </h1>
+                </div>
+            </div>
+            <div class="column is-half">
+                <img class="imgage" src="img/gift-habeshaw-469432-unsplash.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="section straight vertical-padding">
+        <img class="cover-image" src="img/about_gallery_img_1.jpg" />
+    </section>
+
+    <section class="section3" id="section-panel" style="position: relative; padding-top: 50px; background-color: #1e1e1e">
+        <div class="sampleLine"></div>
+        <h1 style="    color: white;
+             font-size: 3rem;
+             padding: 30px;
+             text-align: center;">
+            پکیج ها</h1>
+        <div class="section2 animate">
+            <div class="flipper">
+                <div class="middle">
+                    <img src="img/after1.jpg" />
+                </div>
+                <div class="right tiles">
+                    <img src="img/before1.jpg" />
+                </div>
+            </div>
+            <div class="left tile">
+                <div class="content">
+                    <h2> پکیج مقرون به صرفه </h2>
+                    <p> این مجسمه حداکثر 10 سانت هست به دلیل قیمت پایینش طرفدارای زیادی داره</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section2">
+            <div class="flipper">
+                <div class="middle">
+                    <img src="img/after2.jpg" />
+                </div>
+                <div class="left tiles">
+                    <img src="img/before2.jpg" />
+                </div>
+            </div>
+            <div class="right tile">
+                <div class="content">
+                    <h2>پکیج نقره ای </h2>
+                    <p> این مجسمه حداکثر 20 سانت هست و مسلما میتونه جزییات رو بهتر به نمایش بزاره</p>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="flipper">
+                <div class="middle">
+                    <img src="img/after3.jpg" />
+                </div>
+                <div class="right tiles">
+                    <img src="img/before3.jpg" />
+                </div>
+            </div>
+            <div class="left tile">
+                <div class="content">
+                    <h2>پکیج طلایی</h2>
+                    <p> این مجسمه حداکثر 30 سانت هست و میتونه یه هدیه عالی باشه </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section2">
+            <div class="flipper">
+                <div class="middle">
+                    <img src="img/after4.jpg" />
+                </div>
+                <div class="left tiles">
+                    <img src="img/before4.jpg" />
+                </div>
+            </div>
+            <div class="right tile">
+                <div class="content">
+                    <h2> پکیج ویژه </h2>
+                    <p> این مجسمه محدودیتی ندارد و میتونه یه کار خیلی خاص باشه </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section left has-m-t-3" id="section-portofilo">
+        <div class="columns reverse">
+            <div class="column is-half has-margin-auto">
+                <div class="container-text has-margin-auto left messy">
+                    <h1 class="title is-1 is-spaced primary">
+                        <p>نمونه</p>
+                        <p>کار</p>
+                    </h1>
+
+                </div>
+            </div>
+            <div class="column is-half clearfix has-margin-auto">
+                <div class="container-text large float-left">
+                    <h1 class="subtitle is-4">
+                        شما علاوه بر خودتون هر چیزی رو میتونید اسکن و پرینت کنید حتی میتونید شخصیت های محبوبتون رو به
+                        ما بگید تا ما اونارو شبیه سازی
+                        کنیم
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="flexGallery">
+            <div class="galleryItem">
+                <div class="grow">
+                    <img class="galleryItemImage" src="img/g1.jpg" />
+                </div>
+                <div class="galleryText">
+                    <h5>Rabbit girl</h5>
+                    <p>سفارش آرتان</p>
+                </div>
+            </div>
+            <div class="galleryItem">
+                <div class="grow">
+                    <img class="galleryItemImage" src="img/g2.jpg" />
+                </div>
+                <div class="galleryText">
+                    <h5>Dragon cup</h5>
+                    <p>سفارش نیلوفر</p>
+                </div>
+            </div>
+            <div class="galleryItem">
+                <div class="grow">
+                    <img class="galleryItemImage" src="img/g3.jpg" />
+                </div>
+                <div class="galleryText">
+                    <h5>Legulas</h5>
+                    <p>سفارش عرفان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section left padding-only-right" id="section-ourteam">
+        <div class="is-100height-desktop has-background-primary">
+            <div class="columns is-gapless">
+                <div class="wrapper-caroussel-pp column is-two-fifths">
+                    <div class="container-caroussel-pp">
+                        <div class="el-pp show" style="background-image: url('img/people1.jpg')">
+                        </div>
+                        <div class="el-pp" style="background-image: url('img/people2.jpg')">
+                        </div>
+                        <div class="el-pp" style="background-image: url('img/people3.jpg')">
+                        </div>
+                        <div class="el-pp" style="background-image: url('img/people4.png')">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="container-text has-margin-auto right">
+                        <h1 class="title is-1 is-spaced white has-text-white">
+                            <p>تیم ما</p>
+                        </h1>
+                        <h1 class="subtitle is-4">
+                            ما یه تیم کوچیک هستیم که تمام تلاشمون رو انجام میدیم که شما رو راضی نگه داریم
+                        </h1>
+                        <div class="container-caroussel-name">
+                            <div class="el-name">
+                                <div class="prg"></div>
+                                <span class="name">سید حسین وهابی</span>
+                                <span class="job">اسکن </span>
+                            </div>
+                            <div class="el-name">
+                                <div class="prg"></div>
+                                <span class="name">میلاد صادقی</span>
+                                <span class="job">طراحی</span>
+                            </div>
+                            <div class="el-name">
+                                <div class="prg"></div>
+                                <span class="name">نرگس وهابی</span>
+                                <span class="job"> رنگ آمیزی </span>
+                            </div>
+                            <div class="el-name">
+                                <div class="prg"></div>
+                                <span class="name">مهدی خاشی</span>
+                                <span class="job">پشتیبانی فنی </span>
+                            </div>
+                        </div>
+                        <h1>اصفهان </h1>
+                        <h1>0936 009 1240 - 0914 006 8820</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item is-hidden-tablet logo">
+                    <a class="container-logo">
+                        <img src="img/dl.png" style="height: 50px;" />
+                    </a>
+                </div>
+                <div class="level-item">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14">
+                            <use xlink:href="#Instagram-icn"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 12">
+                            <use xlink:href="#Twitter-icn"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="level-right">
+                <p class="level-item">© 2018 MiniArt</p>
+            </div>
+        </div>
+        <div class="logo is-hidden-mobile">
+            <a class="container-logo">
+                <img src="img/dl.png" style="height: 50px;" />
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.bundle.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.is-width-400 {
+    width: 400px;
+}
+
+.has-radius-10 {
+    border-radius: 10px;
+}
+
+.has-margin-auto {
+    margin: auto auto;
+}
+
+.has-p-t-30{
+    padding-top: 30px;
+}
+
+.has-m-t-3{
+    margin-top: 3rem;
+}
+
+.is-overflow-hidden {
+    overflow: hidden;
+}
+
+.card.frame {
+    border: white solid 10px;
+}
+
+.is-relative {
+    position: relative;
+}
+
+.is-absolute {
+    position: absolute;
+}
+
+.has-bottom-margin-20 {
+    margin-bottom: 20px;
+}
+
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.section.half-padding {
+    padding: 1.5rem 1.5rem;
+}
+
+.section.no-padding {
+    padding: 0;
+}
+
+.section.no-vertical-padding {
+    padding: 0 1.5rem;
+}
+
+.section.vertical-padding {
+    padding: 3rem 0rem;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.columns.reverse{
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: $tablet) {}
+
+.section.padding-only-right,
+.section.padding-only-left {
+    padding: 3rem 0;
+}
+
+@media screen and (min-width: $desktop) {
+    .is-rotate-90 {
+        -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+        transform-origin: left top;
+        -webkit-transform: translateY(40px) translateX(95px) rotate(-90deg);
+        -ms-transform: translateY(40px) translateX(95px) rotate(-90deg);
+        transform: translateY(40px) translateX(95px) rotate(-90deg);
+    }
+
+    .is-vertical-center-desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    .is-100height-desktop {
+        height: 100%;
+    }
+
+    .section.padding-only-right {
+        padding: 3rem 3rem 3rem 0;
+    }
+
+    .section.padding-only-left {
+        padding: 3rem 0 3rem 3rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .column.is-offset-one-quarter,
+    .column.is-offset-one-quarter-tablet {
+        margin-left: 0%;
+        margin-right: 25%;
+    }
+}

@@ -1,0 +1,70 @@
+.section2 .left,
+.section2 .right,
+.section2 {
+    height: calc((100vw / 3) - 6px);
+}
+
+.section2 .tile{
+    background: #003981;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    h2 {
+        font-weight: bold;
+        font-size: 120%;
+        margin-top: 0;
+    }
+    
+    p {
+        line-height: 1.55em;
+        margin-bottom: 0.75em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section2 {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    .section2.flip .flipper>div:last-child {
+        transform: rotateY(0deg);
+    }
+
+    .section2.flip .flipper>div:first-child {
+        transform: rotateY(180deg);
+    }
+
+    .section2 .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+
+        &>div {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &,
+        &>div {
+            height: 500px;
+        }
+
+        &>div:first-child {
+            z-index: 2;
+            /* for firefox 31 */
+            transform: rotateY(0deg);
+        }
+
+        &>div:last-child {
+            transform: rotateY(-180deg);
+        }
+    }
+
+    .section2>.left,
+    .section2>.right,
+    .section2 {
+        height: auto;
+    }
+}

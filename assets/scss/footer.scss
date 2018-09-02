@@ -1,0 +1,33 @@
+.footer {
+    position: relative;
+    padding: 35px 45px 35px 45px;
+    color: #8A99C0;
+    .level {
+        .logo {
+            svg {
+                fill: #363F54;
+                width: 40px;
+            }
+        }
+        margin-bottom: 0;
+        svg {
+            width: 15px;
+            fill: #8A99C0;
+        }
+        .level-item a:not(:first-child){
+            margin-right: 30px;
+        }
+    }
+    &>.logo {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        height: 20px;
+        -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
+        svg {
+            fill: #363F54;
+        }
+    }
+}

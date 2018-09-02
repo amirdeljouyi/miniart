@@ -1,0 +1,67 @@
+@keyframes containerMsScroll {
+    0% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes containerMsScroll {
+    0% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideBgTop {
+    0% {
+        -webkit-transform: translateY(-100%)translateX(50%);
+                transform: translateY(-100%)translateX(50%);
+        -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+    }
+    50% {
+        -webkit-transform: translateY(-50%)translateX(50%) skewY(-20deg);
+                transform: translateY(-50%)translateX(50%) skewY(-20deg);
+    }
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+        -webkit-transform: translateY(0%)translateX(50%);
+                transform: translateY(0%)translateX(50%);
+    }
+}
+@-webkit-keyframes slideBgTop {
+   	0% {
+        -webkit-transform: translateY(-100%)translateX(50%);
+                transform: translateY(-100%)translateX(50%);
+        -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+    }
+    50% {
+        -webkit-transform: translateY(-50%)translateX(50%) skewY(-20deg);
+                transform: translateY(-50%)translateX(50%) skewY(-20deg);
+    }
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+        -webkit-transform: translateY(0%)translateX(50%);
+                transform: translateY(0%)translateX(50%);
+	}
+}
